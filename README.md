@@ -13,3 +13,11 @@ The General format:
 
 
 [def]: https://semver.org
+
+## Install the Terraform CLI
+
+[Install Terraform CLI](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
+
+## Gitpod Task
+[Gitpod Task](https://www.gitpod.io/docs/configure/workspaces/tasks)
+
