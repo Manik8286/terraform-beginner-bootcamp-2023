@@ -95,3 +95,57 @@ if it is successful you should see a json payload return that looks like this:
     "Arn": "arn:aws:iam::000000000000:user/manikandan-terraform"
 }
 ```
+
+## Terraform Basic
+
+### Terraform Registry
+
+Terrform sources their providers and modules from the Terraform registry which located at (https://registry.terraform.io/)[registry.terraform.io]
+
+- **Providers** is an interface to APIs that will allow to create resources in terraform.
+- **Modules** are a way to make large amount of terraform code modular, protable and sharable. 
+
+(Random Provider)[https://registry.terraform.io/providers/hashicorp/random/latest/docs]
+
+### Terrform Console
+
+we can see a list of all the Terrform commands by simply typing `terraform`
+
+### Terraform init
+
+At the start of a new terraform project. we will run `terraform init` to download the binaries for the project that we'll use in this project.
+
+### Terraform plan
+
+`terraform plan`
+This will generate out a changeset, about the state of our Infra and what will be changed.
+
+we can output this changeset ie. "plan" to be passed to an apply, but oftehn you can just ignore outputting.
+
+### Terraform apply
+
+`terraform apply`
+
+This will run a plan and pass the changeset to be execute by terraform. Apply should prompt the confirmation "Yes or no"
+
+if we want to approve automatically provide the auto approve flag `terraform apply --auto-approve` command to be execute. 
+
+### Terraform Lock Files
+ 
+ `.terraform.lock.hcl` contains the locked versioniong for the providers or modules that should be used with this project
+
+ The Terraform Lock File **should not be committed** to your Version Control System (VSC)
+  
+ This file can contain sensentive data.
+
+ If you lose this file, you lose knowning the state of your infra.
+
+ `.terraform.tfstate.backup` is the previous state file state.
+
+ `.terraform` directory contain the terrform provider files
+### Terraform State Files
+
+`.terraform.tfstate` contain information about the current state of your infra.
+
+
+
