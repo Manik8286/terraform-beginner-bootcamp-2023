@@ -148,4 +148,12 @@ if we want to approve automatically provide the auto approve flag `terraform app
 `.terraform.tfstate` contain information about the current state of your infra.
 
 
+## AWS S3 Bucket
 
+### S3 Bucket Name standard
+(AWS S3 Naming)[https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucketnamingrules.html?icmpid=docs_amazons3_console]
+
+#### Terraform Destroy
+
+`terraform destory`
+This command will destory created service
