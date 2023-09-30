@@ -182,3 +182,5 @@ Provide the below code(Replace the your token in the file):
   }
 }
 ```
+
+We have automated this workaround using bash script [/bin/genereate_credentials_trfc](bin/generate_credentials_tfrc)
