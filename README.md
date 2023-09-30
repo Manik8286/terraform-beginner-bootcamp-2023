@@ -157,3 +157,28 @@ if we want to approve automatically provide the auto approve flag `terraform app
 
 `terraform destory`
 This command will destory created service
+
+#### Issues with Terraform cloud Login and Gitpod workspace
+
+When attempting to run `terraform login` it will launch bash a wiswig view to generate a token. However it does not work excepted in Gitpod VsCode in the browser.
+
+The workaroung is manually generate a token in Terraform Cloud
+```
+https://app.terraform.io/app/settings/tokens?source=terraform-login
+```
+Then create a file Manually here:
+```
+touch /home/gitpod/.terraform.d/credentials.tfrc.json
+open /home/gitpod/.terraform.d/credentials.tfrc.json
+```
+Provide the below code(Replace the your token in the file):
+
+```json
+{
+  "credentials": {
+    "app.terraform.io": {
+      "token": "YOUR-TOKEN-CODE"
+    }
+  }
+}
+```
