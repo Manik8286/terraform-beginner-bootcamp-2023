@@ -18,11 +18,7 @@ terraform {
   #}
  
 
-    random = {
-      source = "hashicorp/random"
-      version = "3.5.1"
-    }
-        aws = {
+    aws = {
       source = "hashicorp/aws"
       version = "5.18.1"
     }
