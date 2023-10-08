@@ -131,7 +131,7 @@ Terrform sources their providers and modules from the Terraform registry which l
 - **Providers** is an interface to APIs that will allow to create resources in terraform.
 - **Modules** are a way to make large amount of terraform code modular, protable and sharable. 
 
-(Random Provider)[https://registry.terraform.io/providers/hashicorp/random/latest/docs]
+[Random Provider](https://registry.terraform.io/providers/hashicorp/random/latest/docs)
 
 ### Terrform Console
 
@@ -177,7 +177,7 @@ if we want to approve automatically provide the auto approve flag `terraform app
 ## AWS S3 Bucket
 
 ### S3 Bucket Name standard
-(AWS S3 Naming)[https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucketnamingrules.html?icmpid=docs_amazons3_console]
+[AWS S3 Naming](https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucketnamingrules.html?icmpid=docs_amazons3_console)
 
 #### Terraform Destroy
 

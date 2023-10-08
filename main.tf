@@ -1,13 +1,32 @@
-#https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket
+terraform {
+   #  cloud {
+   # organization = "Manik8286"
 
-resource "aws_s3_bucket" "website_bucket" {
-  #https://docs.aws.amazon.com/console/s3/bucket-naming
+    #workspaces {
+    #  name = "terra-house-1"
+    #}
+  #}
+  
+  #required_providers {
 
-  #bucket = random_string.bucket_name.result
-  bucket = var.bucket_name
+  #backend "remote" {
+  #  hostname = "app.terraform.io"
+  #  organization = "Manik8286"
+#    workspaces {
+ #     name = "terra-house-1"
+  #  }
+  #}
+ 
 
-  tags = {
+    #aws = {
+     # source = "hashicorp/aws"
+     # version = "5.18.1"
+    #}
+  #}
+}
 
-     UserUuid = var.user_uuid
-  }
+module "terrahouse_aws"{
+source = "./modules/terrahouse_aws"
+user_uuid = var.user_uuid
+bucket_name = var.bucket_name
 }
